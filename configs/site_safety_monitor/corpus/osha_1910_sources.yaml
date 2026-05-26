@@ -1,0 +1,46 @@
+sources:
+  - standard_number: "1910.132"
+    title: "General requirements"
+    url: "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.132"
+    domain_tags: ["ppe"]
+    crawl_priority: 10
+  - standard_number: "1910.133"
+    title: "Eye and face protection"
+    url: "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.133"
+    domain_tags: ["ppe", "eye_face"]
+    crawl_priority: 20
+  - standard_number: "1910.134"
+    title: "Respiratory protection"
+    url: "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.134"
+    domain_tags: ["ppe", "respiratory"]
+    crawl_priority: 30
+  - standard_number: "1910.135"
+    title: "Head protection"
+    url: "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.135"
+    domain_tags: ["ppe", "head"]
+    crawl_priority: 40
+  - standard_number: "1910.136"
+    title: "Foot protection"
+    url: "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.136"
+    domain_tags: ["ppe", "foot"]
+    crawl_priority: 50
+  - standard_number: "1910.138"
+    title: "Hand protection"
+    url: "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.138"
+    domain_tags: ["ppe", "hand"]
+    crawl_priority: 60
+  - standard_number: "1910.95"
+    title: "Occupational noise exposure"
+    url: "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.95"
+    domain_tags: ["noise", "hearing"]
+    crawl_priority: 70
+  - standard_number: "1910.212"
+    title: "General requirements for all machines"
+    url: "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.212"
+    domain_tags: ["machine_guarding", "operations"]
+    crawl_priority: 80
+  - standard_number: "1910.252"
+    title: "Welding, cutting, and brazing"
+    url: "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.252"
+    domain_tags: ["welding", "operations"]
+    crawl_priority: 90

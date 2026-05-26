@@ -1,0 +1,52 @@
+labels:
+  worker: worker
+  workers: worker
+  employee: worker
+  employees: worker
+  affected employee: worker
+  affected employees: worker
+  helmet: head_protection
+  helmets: head_protection
+  hard hat: head_protection
+  hard hats: head_protection
+  protective helmet: head_protection
+  safety glasses: eye_protection
+  eye protection: eye_protection
+  glasses: eye_protection
+  face shield: face_protection
+  face shields: face_protection
+  face guard: face_protection
+  face-guard: face_protection
+  respirator: respiratory_protection
+  respirators: respiratory_protection
+  face-mask-medical: respiratory_protection
+  face mask medical: respiratory_protection
+  face mask: respiratory_protection
+  hearing protection: hearing_protection
+  earplugs: hearing_protection
+  earmuffs: hearing_protection
+  gloves: hand_protection
+  hand protection: hand_protection
+  shoes: foot_protection
+  safety shoes: foot_protection
+  protective footwear: foot_protection
+  safety suit: protective_clothing
+  safety-suit: protective_clothing
+  medical suit: protective_clothing
+  medical-suit: protective_clothing
+  safety vest: high_visibility_clothing
+  safety-vest: high_visibility_clothing
+  tools: tool
+operations:
+  welding: welding
+  cutting: welding
+  brazing: welding
+  machine operation: machine_operation
+  machine operations: machine_operation
+  high noise operation: high_noise_operation
+  noise exposure: high_noise_operation
+hazards:
+  eye injury: eye_injury
+  hearing loss: hearing_loss
+  amputation: amputation
+  respiratory irritation: respiratory_irritation
