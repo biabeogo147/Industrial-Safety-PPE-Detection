@@ -65,6 +65,31 @@ def load_bert_examples_jsonl(path: str | Path) -> list[BertSentenceExample]:
     return examples
 
 
+def load_candidate_sentences_jsonl(path: str | Path) -> list[CandidateSentence]:
+    candidates: list[CandidateSentence] = []
+    with Path(path).open("r", encoding="utf-8") as handle:
+        for line in handle:
+            if not line.strip():
+                continue
+            payload = json.loads(line)
+            candidates.append(
+                CandidateSentence(
+                    sentence_id=payload["sentence_id"],
+                    source_standard=payload["source_standard"],
+                    section_ref=payload["section_ref"],
+                    source_url=payload["source_url"],
+                    text=payload["text"],
+                    normalized_text=payload["normalized_text"],
+                    tokens=tuple(payload["tokens"]),
+                    token_count=payload["token_count"],
+                    language=payload.get("language", "en"),
+                    domain_tags=tuple(payload.get("domain_tags", [])),
+                    candidate_score=payload["candidate_score"],
+                )
+            )
+    return candidates
+
+
 def score_candidate_sentence(sentence: str) -> int:
     lowered = sentence.lower()
     score = 0

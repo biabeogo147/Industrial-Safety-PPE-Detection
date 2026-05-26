@@ -66,10 +66,18 @@ Implemented pieces already present:
 - BIEO dataset builder with word-to-subword alignment
 - transformer training, checkpointing, and inference CLIs
 - offline smoke coverage with a tiny local BERT checkpoint
+- pilot selection tooling and a first gold pilot dataset under `E:\data\SH17`
 
 ## Verification
 
 - `D:\Anaconda\envs\Industrial-Safety-PPE-Detection\python.exe -m pytest tests\unit tests\integration -v`
-  - Result: `27 passed`
+  - Result: `31 passed`
 - `D:\Anaconda\envs\Industrial-Safety-PPE-Detection\python.exe scripts\run_site_safety_monitor.py --regulation tests\fixtures\regulations\work_at_height.json --scene tests\fixtures\scenes\work_at_height.json`
   - Result: `No` compliance with hazard `head injury from falls`
+
+## Current Text IE Status
+
+- active pilot config points to a local `bert-base-cased` checkpoint under `E:\data\SH17\site_safety_monitor\models\bert-base-cased`
+- the first pilot gold dataset has been materialized to `train/val/test` under `E:\data\SH17\site_safety_monitor\text_ie\annotations`
+- the first real training run completed and saved `best_model.pt` to `E:\data\SH17\site_safety_monitor\text_ie\artifacts\pilot_run_001`
+- the current pilot is still too small and sparse: first validation `F1` is `0.0`, so the next work should focus on improving pilot coverage and annotation quality before expecting useful extraction quality

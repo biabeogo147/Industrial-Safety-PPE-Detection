@@ -110,6 +110,16 @@ The current exported annotation assets are:
 
 `annotation_seed.jsonl` keeps the candidate sentence metadata and tokens, but starts with `triples: []` so it can be filled manually into a gold annotation set.
 
+The current active pilot assets are:
+
+- `E:\data\SH17\site_safety_monitor\text_ie\annotations\pilot\pilot_scope.md`
+- `E:\data\SH17\site_safety_monitor\text_ie\annotations\train.jsonl`
+- `E:\data\SH17\site_safety_monitor\text_ie\annotations\val.jsonl`
+- `E:\data\SH17\site_safety_monitor\text_ie\annotations\test.jsonl`
+- `E:\data\SH17\site_safety_monitor\text_ie\processed\bieo\pilot_train\encoded.jsonl`
+- `E:\data\SH17\site_safety_monitor\text_ie\processed\bieo\pilot_val\encoded.jsonl`
+- `E:\data\SH17\site_safety_monitor\text_ie\processed\bieo\pilot_test\encoded.jsonl`
+
 The detailed design and plan live in:
 
 - `docs/superpowers/specs/2026-05-26-manufacturing-text-ie-design.md`

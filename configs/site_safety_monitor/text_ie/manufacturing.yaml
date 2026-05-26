@@ -1,14 +1,14 @@
-encoder_name: bert-base-cased
+encoder_name: E:/data/SH17/site_safety_monitor/models/bert-base-cased
 predicates:
   - be_equipped_with
   - perform_operations
   - occurrence
 train_annotations: E:/data/SH17/site_safety_monitor/text_ie/annotations/train.jsonl
 val_annotations: E:/data/SH17/site_safety_monitor/text_ie/annotations/val.jsonl
-output_dir: E:/data/SH17/site_safety_monitor/text_ie/artifacts
+output_dir: E:/data/SH17/site_safety_monitor/text_ie/artifacts/pilot_run_001
 max_length: 256
-batch_size: 8
-num_epochs: 5
+batch_size: 4
+num_epochs: 6
 learning_rate: 1.0e-5
 validation_metric: f1
 early_stopping_patience: 10
