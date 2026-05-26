@@ -1,4 +1,4 @@
-"""Prepare sentence-level manufacturing triples from interim corpus artifacts."""
+"""Prepare BERT-ready OSHA sentence corpus from interim crawl artifacts."""
 
 from __future__ import annotations
 
@@ -6,17 +6,13 @@ import argparse
 import json
 from pathlib import Path
 
-from _bootstrap import bootstrap_project
+from _bootstrap import ensure_src_on_path
 
-bootstrap_project()
+ensure_src_on_path()
 
+from site_safety_monitor.data.bert_corpus import build_bert_corpus, export_bert_corpus, load_bert_corpus_rules
 from site_safety_monitor.data.corpus_models import SentenceRecord
 from site_safety_monitor.data.osha_corpus import DEFAULT_OUTPUT_ROOT
-from site_safety_monitor.data.text_annotation import (
-    annotate_sentence_records,
-    export_processed_text_dataset,
-    load_annotation_rules,
-)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -50,21 +46,15 @@ def _load_sentences(path: Path) -> list[SentenceRecord]:
 def main() -> None:
     parser = build_parser()
     args = parser.parse_args()
-
     interim_path = Path(args.output_root) / "text_corpus" / "interim" / "sentences.jsonl"
     sentences = _load_sentences(interim_path)
-    rules = load_annotation_rules(args.rules_path) if args.rules_path else load_annotation_rules()
-    kept_sentences, annotations = annotate_sentence_records(sentences, rules=rules)
-    output_paths = export_processed_text_dataset(
-        sentences=kept_sentences,
-        annotations=annotations,
-        output_root=args.output_root,
-    )
+    rules = load_bert_corpus_rules(args.rules_path) if args.rules_path else load_bert_corpus_rules()
+    examples = build_bert_corpus(sentences, rules=rules)
+    output_paths = export_bert_corpus(examples, output_root=args.output_root)
     print(
         json.dumps(
             {
-                "kept_sentences": len(kept_sentences),
-                "annotations": len(annotations),
+                "examples": len(examples),
                 "output_paths": {name: str(path) for name, path in output_paths.items()},
             },
             indent=2,

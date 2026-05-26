@@ -42,11 +42,16 @@ class SentenceRecord:
 
 
 @dataclass(frozen=True)
-class TripleAnnotation:
-    """Schema-aligned triple tied to a sentence record."""
+class BertSentenceExample:
+    """Clean sentence record prepared for downstream BERT tokenization."""
 
     sentence_id: str
-    subject: str
-    predicate: str
-    object: str
-
+    source_standard: str
+    section_ref: str
+    source_url: str
+    text: str
+    normalized_text: str
+    tokens: tuple[str, ...]
+    token_count: int
+    language: str = "en"
+    domain_tags: tuple[str, ...] = field(default_factory=tuple)

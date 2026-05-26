@@ -19,7 +19,8 @@ DEFAULT_OUTPUT_ROOT = Path(r"E:\data\SH17\site_safety_monitor")
 
 _SENTENCE_SPLIT_PATTERN = re.compile(r"(?<=[.!?])\s+(?=[A-Z])")
 _WHITESPACE_PATTERN = re.compile(r"\s+")
-_TEXT_TAGS = {"p", "li"}
+_ARTICLE_PATTERN = re.compile(r"(?is)<article\b[^>]*>(.*?)</article>")
+_TEXT_TAGS = {"p", "li", "blockquote"}
 _HEADING_TAGS = {"h1", "h2", "h3", "h4"}
 
 
@@ -86,8 +87,9 @@ def load_source_manifest(path: str | Path = DEFAULT_MANIFEST_PATH) -> list[OshaS
 
 
 def extract_sections_from_html(source: OshaSourcePage, html: str) -> list[SectionRecord]:
+    article_html = _extract_article_html(html)
     parser = _OshaSectionParser()
-    parser.feed(html)
+    parser.feed(article_html)
     sections = [
         SectionRecord(
             source_standard=source.standard_number,
@@ -101,7 +103,7 @@ def extract_sections_from_html(source: OshaSourcePage, html: str) -> list[Sectio
     ]
     if sections:
         return sections
-    fallback_text = _normalize_whitespace(re.sub(r"<[^>]+>", " ", html))
+    fallback_text = _normalize_whitespace(re.sub(r"<[^>]+>", " ", article_html))
     if not fallback_text:
         return []
     return [
@@ -114,6 +116,13 @@ def extract_sections_from_html(source: OshaSourcePage, html: str) -> list[Sectio
             domain_tags=source.domain_tags,
         )
     ]
+
+
+def _extract_article_html(html: str) -> str:
+    match = _ARTICLE_PATTERN.search(html)
+    if match:
+        return match.group(1)
+    return html
 
 
 def section_to_sentence_records(section: SectionRecord) -> list[SentenceRecord]:

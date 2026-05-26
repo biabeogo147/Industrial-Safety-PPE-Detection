@@ -29,25 +29,23 @@
 - `src/site_safety_monitor/scene_graph`: relation priors, decoding, and evaluation helpers
 - `src/site_safety_monitor/safety`: compliance and hazard logic
 - `src/site_safety_monitor/pipelines`: end-to-end runner
-- `src/site_safety_monitor/data`: manufacturing corpus prep, OSHA crawling, and SH17 derivative exports
+- `src/site_safety_monitor/data`: OSHA crawling and BERT-ready corpus preparation
 
 ## Manufacturing Prep
 
-The current baseline is still paper-faithful in logic, but the prep layer now pivots the future data source from `construction` to `manufacturing / general industry` because `SH17` is a manufacturing dataset.
+The current prep scope is intentionally narrower than before:
 
-- Official text backbone: `OSHA 1910`
-- Lightweight semantic layer: repo-local `ontology-lite`
-- Derived vision assets: `E:\data\SH17\site_safety_monitor`
+- keep `SH17` as the installed vision dataset
+- keep `OSHA 1910` as a cleaned manufacturing corpus
+- export sentence-level JSONL records ready for later BERT tokenization and manual labeling
 
-The preparation docs live in:
+The current prep doc is:
 
-- `docs/superpowers/specs/2026-05-26-manufacturing-corpus-prep-design.md`
-- `docs/superpowers/plans/2026-05-26-manufacturing-corpus-prep-plan.md`
 - `docs/datasets/manufacturing-corpus.md`
 
 ## Verification
 
 - `D:\Anaconda\envs\Industrial-Safety-PPE-Detection\python.exe -m pytest tests\unit tests\integration -v`
-  - Result: `19 passed`
+  - Result: `18 passed`
 - `D:\Anaconda\envs\Industrial-Safety-PPE-Detection\python.exe scripts\run_site_safety_monitor.py --regulation tests\fixtures\regulations\work_at_height.json --scene tests\fixtures\scenes\work_at_height.json`
   - Result: `No` compliance with hazard `head injury from falls`

@@ -1,0 +1,23 @@
+exclude_keywords:
+  - an official website of the united states government
+  - here's how you know
+  - the .gov means it's official
+  - the .gov means itâ€™s official
+  - federal government websites often end in .gov or .mil
+  - before sharing sensitive information
+  - the site is secure
+  - the https:// ensures that you are connecting to the official website
+  - table of contents
+  - authority
+  - appendix
+  - federal register
+  - office of management and budget
+  - skip to main content
+  - information collections
+  - freedom of information act
+  - job safety and health poster
+  - outreach training program
+  - training institute education centers
+  - training grants
+min_characters: 24
+min_alpha_tokens: 4
