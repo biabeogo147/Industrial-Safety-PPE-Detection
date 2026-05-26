@@ -1,0 +1,1 @@
+"""Text information extraction components."""

@@ -1,0 +1,19 @@
+{
+  "triples": [
+    {
+      "subject": "workers",
+      "predicate": "be_equipped_with",
+      "object": "hard hat"
+    },
+    {
+      "subject": "workers",
+      "predicate": "perform_operations",
+      "object": "work at height"
+    },
+    {
+      "subject": "work at height",
+      "predicate": "occurrence",
+      "object": "head injury from falls"
+    }
+  ]
+}

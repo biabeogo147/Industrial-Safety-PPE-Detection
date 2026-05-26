@@ -1,0 +1,11 @@
+{
+  "triples": [
+    {
+      "subject_id": "worker_0",
+      "subject_label": "worker",
+      "predicate": "wear",
+      "object_id": "glove_0",
+      "object_label": "hand protection"
+    }
+  ]
+}

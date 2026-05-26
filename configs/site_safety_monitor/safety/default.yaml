@@ -1,0 +1,9 @@
+required_text_predicate: be_equipped_with
+accepted_visual_predicates:
+  - wear
+  - be_equipped_with
+matching_rule: textual_ppe_subset_of_visual_triples
+compliance_labels:
+  yes: "Yes"
+  no: "No"
+  not_applicable: "N/A"

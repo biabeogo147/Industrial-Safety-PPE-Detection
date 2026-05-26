@@ -1,0 +1,20 @@
+detector_family: mask_rcnn
+detector_backbone: resnext101_fpn
+semantic_embedding_source: fasttext_common_crawl_2m
+learning_rate: 1.0e-3
+optimizer: momentum_sgd
+train_split: 0.8
+test_split: 0.2
+semantic_prior:
+  smoothing: 0.0
+predicates:
+  - wear
+  - hold
+evaluation_tasks:
+  - SGGen
+  - SGCls
+  - PredCls
+recall_cutoffs:
+  - 20
+  - 50
+  - 100

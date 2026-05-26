@@ -1,0 +1,12 @@
+encoder_name: bert-base-chinese
+hidden_size: 768
+num_hidden_layers: 12
+num_attention_heads: 12
+approximate_parameter_count: 110000000
+learning_rate: 1.0e-5
+validation_metric: f1
+early_stopping_patience: 10
+predicates:
+  - be_equipped_with
+  - perform_operations
+  - occurrence
