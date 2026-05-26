@@ -53,6 +53,12 @@ E:\data\SH17\site_safety_monitor\
     raw\
     interim\
     processed\
+  text_ie\
+    candidates\
+    annotations\
+    processed\
+      bieo\
+    artifacts\
 ```
 
 This keeps the repo small while still keeping the prepared assets next to the source dataset.
@@ -88,3 +94,24 @@ The goal of that next phase is not to redesign the baseline. It is to swap in:
 
 - BERT-ready manufacturing sentences from the OSHA corpus
 - a later manually labeled text-IE dataset built from those sentences
+
+## Next Text IE Phase
+
+The approved next step is:
+
+- manually annotate a manufacturing-domain text IE dataset from the OSHA candidate pool
+- train an English `BERT + BIEO` model
+- decode model outputs back into relational triples compatible with the baseline
+
+The current exported annotation assets are:
+
+- `E:\data\SH17\site_safety_monitor\text_ie\candidates\all_candidates.jsonl`
+- `E:\data\SH17\site_safety_monitor\text_ie\candidates\annotation_seed.jsonl`
+
+`annotation_seed.jsonl` keeps the candidate sentence metadata and tokens, but starts with `triples: []` so it can be filled manually into a gold annotation set.
+
+The detailed design and plan live in:
+
+- `docs/superpowers/specs/2026-05-26-manufacturing-text-ie-design.md`
+- `docs/superpowers/plans/2026-05-26-manufacturing-text-ie-plan.md`
+- `docs/superpowers/plans/2026-05-26-manufacturing-text-ie-training-readiness-plan.md`

@@ -13,7 +13,8 @@
 
 - Text IE uses the paper's documented `schema-driven + BIEO` direction.
 - The BIEO tag space follows the paper's `4|N| + 2` rule for `B/E` subject-object tags plus `I/O`.
-- Text IE defaults are aligned to the paper where specified: `BERT-Base Chinese`, `lr=1e-5`, and early stopping patience `10`.
+- Text IE keeps the paper's training formulation, but the manufacturing adaptation swaps `bert-base-chinese` for an English-compatible encoder such as `bert-base-cased`.
+- Text IE optimization defaults stay paper-like where specified: `lr=1e-5` and early stopping patience `10`.
 - Scene-graph defaults are aligned to the paper where specified: `Mask R-CNN` family, `ResNeXt-101-FPN` result backbone, `fastText` semantic prior source, `lr=1e-3`, and `momentum SGD`.
 - Safety checking follows the paper's subset logic:
   - no detected worker -> `N/A`
@@ -43,9 +44,32 @@ The current prep doc is:
 
 - `docs/datasets/manufacturing-corpus.md`
 
+## Next Text IE Work
+
+The approved `manufacturing text IE` subproject is now scaffolded in-repo:
+
+- curate an annotation candidate pool from OSHA
+- manually label triples with subject/object spans
+- train an English `BERT + BIEO` model
+- run inference from raw sentence to triples
+
+Docs:
+
+- `docs/superpowers/specs/2026-05-26-manufacturing-text-ie-design.md`
+- `docs/superpowers/plans/2026-05-26-manufacturing-text-ie-plan.md`
+- `docs/superpowers/plans/2026-05-26-manufacturing-text-ie-training-readiness-plan.md`
+
+Implemented pieces already present:
+
+- candidate export and blank annotation-seed export
+- gold annotation contracts and guideline
+- BIEO dataset builder with word-to-subword alignment
+- transformer training, checkpointing, and inference CLIs
+- offline smoke coverage with a tiny local BERT checkpoint
+
 ## Verification
 
 - `D:\Anaconda\envs\Industrial-Safety-PPE-Detection\python.exe -m pytest tests\unit tests\integration -v`
-  - Result: `18 passed`
+  - Result: `27 passed`
 - `D:\Anaconda\envs\Industrial-Safety-PPE-Detection\python.exe scripts\run_site_safety_monitor.py --regulation tests\fixtures\regulations\work_at_height.json --scene tests\fixtures\scenes\work_at_height.json`
   - Result: `No` compliance with hazard `head injury from falls`

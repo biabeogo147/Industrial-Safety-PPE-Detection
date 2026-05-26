@@ -1,0 +1,16 @@
+encoder_name: bert-base-cased
+predicates:
+  - be_equipped_with
+  - perform_operations
+  - occurrence
+train_annotations: E:/data/SH17/site_safety_monitor/text_ie/annotations/train.jsonl
+val_annotations: E:/data/SH17/site_safety_monitor/text_ie/annotations/val.jsonl
+output_dir: E:/data/SH17/site_safety_monitor/text_ie/artifacts
+max_length: 256
+batch_size: 8
+num_epochs: 5
+learning_rate: 1.0e-5
+validation_metric: f1
+early_stopping_patience: 10
+threshold: 0.5
+dropout: 0.1
