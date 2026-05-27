@@ -63,6 +63,7 @@ Implemented pieces already present:
 
 - candidate export and blank annotation-seed export
 - gold annotation contracts and guideline
+- repo-side full-candidate manual annotation freeze
 - BIEO dataset builder with word-to-subword alignment
 - transformer training, checkpointing, and inference CLIs
 - offline smoke coverage with a tiny local BERT checkpoint
@@ -79,5 +80,10 @@ Implemented pieces already present:
 
 - active pilot config points to a local `bert-base-cased` checkpoint under `E:\data\SH17\site_safety_monitor\models\bert-base-cased`
 - the first pilot gold dataset has been materialized to `train/val/test` under `E:\data\SH17\site_safety_monitor\text_ie\annotations`
+- the repo now also contains a frozen full-candidate annotation source:
+  - `data/annotations/manufacturing_text_ie_annotation_seed.jsonl`
+  - `data/annotations/manufacturing_text_ie_full_overrides.json`
+  - `data/annotations/manufacturing_text_ie_full_gold.jsonl`
+- the frozen full set covers `157` reviewed candidate sentences, with `31` non-empty annotated sentences and `38` total triples
 - the first real training run completed and saved `best_model.pt` to `E:\data\SH17\site_safety_monitor\text_ie\artifacts\pilot_run_001`
 - the current pilot is still too small and sparse: first validation `F1` is `0.0`, so the next work should focus on improving pilot coverage and annotation quality before expecting useful extraction quality

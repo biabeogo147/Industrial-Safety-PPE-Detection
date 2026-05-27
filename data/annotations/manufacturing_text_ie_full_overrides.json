@@ -1,0 +1,553 @@
+{
+  "annotations": [
+    {
+      "sentence_id": "1910.132:009:002",
+      "triples": [
+        {
+          "subject_span": [1, 1],
+          "predicate": "be_equipped_with",
+          "object_span": [5, 6],
+          "subject_text": "employees",
+          "object_text": "protective equipment,"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.132:012:001",
+      "triples": [
+        {
+          "subject_span": [5, 7],
+          "predicate": "be_equipped_with",
+          "object_span": [1, 1],
+          "subject_text": "each affected employee.",
+          "object_text": "PPE"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.133:009:001",
+      "triples": [
+        {
+          "subject_span": [6, 7],
+          "predicate": "be_equipped_with",
+          "object_span": [9, 12],
+          "subject_text": "affected employee",
+          "object_text": "equipment with filter lenses"
+        },
+        {
+          "subject_span": [6, 7],
+          "predicate": "perform_operations",
+          "object_span": [21, 23],
+          "subject_text": "affected employee",
+          "object_text": "work being performed"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.133:010:003",
+      "triples": [
+        {
+          "subject_span": [1, 5],
+          "predicate": "occurrence",
+          "object_span": [11, 13],
+          "subject_text": "oxyfuel gas welding or cutting",
+          "object_text": "high yellow light,"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:011:001",
+      "triples": [
+        {
+          "subject_span": [9, 22],
+          "predicate": "occurrence",
+          "object_span": [5, 6],
+          "subject_text": "breathing air contaminated with harmful dusts, fogs, fumes, mists, gases, smokes, sprays, or vapors,",
+          "object_text": "occupational diseases"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:012:001",
+      "triples": [
+        {
+          "subject_span": [6, 7],
+          "predicate": "be_equipped_with",
+          "object_span": [0, 1],
+          "subject_text": "each employee",
+          "object_text": "A respirator"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:012:004",
+      "triples": [
+        {
+          "subject_span": [4, 5],
+          "predicate": "be_equipped_with",
+          "object_span": [12, 13],
+          "subject_text": "each employee",
+          "object_text": "a respirator."
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:015:001",
+      "triples": [
+        {
+          "subject_span": [13, 13],
+          "predicate": "be_equipped_with",
+          "object_span": [4, 4],
+          "subject_text": "employee",
+          "object_text": "respirators"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:026:001",
+      "triples": [
+        {
+          "subject_span": [9, 9],
+          "predicate": "be_equipped_with",
+          "object_span": [15, 17],
+          "subject_text": "employees",
+          "object_text": "their own respirators,"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:027:001",
+      "triples": [
+        {
+          "subject_span": [20, 21],
+          "predicate": "be_equipped_with",
+          "object_span": [23, 24],
+          "subject_text": "any employee",
+          "object_text": "a respirator"
+        },
+        {
+          "subject_span": [22, 25],
+          "predicate": "occurrence",
+          "object_span": [49, 51],
+          "subject_text": "using a respirator voluntarily",
+          "object_text": "a health hazard"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:027:002",
+      "triples": [
+        {
+          "subject_span": [14, 14],
+          "predicate": "be_equipped_with",
+          "object_span": [25, 28],
+          "subject_text": "employees",
+          "object_text": "filtering facepieces (dust masks)."
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:029:001",
+      "triples": [
+        {
+          "subject_span": [14, 14],
+          "predicate": "be_equipped_with",
+          "object_span": [4, 4],
+          "subject_text": "employee.",
+          "object_text": "respirators,"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:032:001",
+      "triples": [
+        {
+          "subject_span": [17, 17],
+          "predicate": "be_equipped_with",
+          "object_span": [6, 8],
+          "subject_text": "worker",
+          "object_text": "an appropriate respirator"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:034:002",
+      "triples": [
+        {
+          "subject_span": [9, 10],
+          "predicate": "occurrence",
+          "object_span": [19, 19],
+          "subject_text": "employee exposure,",
+          "object_text": "IDLH."
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:037:001",
+      "triples": [
+        {
+          "subject_span": [8, 8],
+          "predicate": "be_equipped_with",
+          "object_span": [6, 6],
+          "subject_text": "employee",
+          "object_text": "respirators"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:043:001",
+      "triples": [
+        {
+          "subject_span": [15, 15],
+          "predicate": "be_equipped_with",
+          "object_span": [4, 5],
+          "subject_text": "employee",
+          "object_text": "a respirator"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:052:001",
+      "triples": [
+        {
+          "subject_span": [7, 7],
+          "predicate": "be_equipped_with",
+          "object_span": [4, 5],
+          "subject_text": "employee",
+          "object_text": "a respirator"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:098:002",
+      "triples": [
+        {
+          "subject_span": [6, 6],
+          "predicate": "be_equipped_with",
+          "object_span": [12, 13],
+          "subject_text": "employee",
+          "object_text": "any respirator"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.134:102:002",
+      "triples": [
+        {
+          "subject_span": [5, 6],
+          "predicate": "be_equipped_with",
+          "object_span": [8, 9],
+          "subject_text": "respirator user",
+          "object_text": "a respirator"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.138:008:002",
+      "triples": [
+        {
+          "subject_span": [5, 5],
+          "predicate": "be_equipped_with",
+          "object_span": [8, 10],
+          "subject_text": "employees",
+          "object_text": "appropriate hand protection"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.212:009:002",
+      "triples": [
+        {
+          "subject_span": [28, 30],
+          "predicate": "occurrence",
+          "object_span": [22, 22],
+          "subject_text": "point of operation,",
+          "object_text": "hazards"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.212:013:001",
+      "triples": [
+        {
+          "subject_span": [3, 5],
+          "predicate": "occurrence",
+          "object_span": [12, 12],
+          "subject_text": "operation of machines",
+          "object_text": "injury,"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.212:013:002",
+      "triples": [
+        {
+          "subject_span": [44, 45],
+          "predicate": "occurrence",
+          "object_span": [40, 41],
+          "subject_text": "operating cycle.",
+          "object_text": "danger zone"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.212:014:001",
+      "triples": [
+        {
+          "subject_span": [19, 19],
+          "predicate": "be_equipped_with",
+          "object_span": [0, 1],
+          "subject_text": "operator",
+          "object_text": "Special handtools"
+        },
+        {
+          "subject_span": [19, 19],
+          "predicate": "perform_operations",
+          "object_span": [3, 6],
+          "subject_text": "operator",
+          "object_text": "placing and removing material"
+        },
+        {
+          "subject_span": [3, 6],
+          "predicate": "occurrence",
+          "object_span": [25, 26],
+          "subject_text": "placing and removing material",
+          "object_text": "danger zone."
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.252:013:002",
+      "triples": [
+        {
+          "subject_span": [0, 0],
+          "predicate": "be_equipped_with",
+          "object_span": [16, 18],
+          "subject_text": "Employees",
+          "object_text": "personal protective equipment"
+        },
+        {
+          "subject_span": [0, 0],
+          "predicate": "perform_operations",
+          "object_span": [7, 11],
+          "subject_text": "Employees",
+          "object_text": "welding, cutting, or brazing operations"
+        },
+        {
+          "subject_span": [7, 11],
+          "predicate": "occurrence",
+          "object_span": [4, 4],
+          "subject_text": "welding, cutting, or brazing operations",
+          "object_text": "hazards"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.252:015:002",
+      "triples": [
+        {
+          "subject_span": [23, 25],
+          "predicate": "occurrence",
+          "object_span": [5, 7],
+          "subject_text": "welding and cutting,",
+          "object_text": "potentially hazardous materials"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.252:017:002",
+      "triples": [
+        {
+          "subject_span": [23, 25],
+          "predicate": "occurrence",
+          "object_span": [28, 35],
+          "subject_text": "flux when heated",
+          "object_text": "fumes that may irritate eyes, nose and throat."
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.252:021:002",
+      "triples": [
+        {
+          "subject_span": [0, 14],
+          "predicate": "occurrence",
+          "object_span": [37, 38],
+          "subject_text": "Welding or cutting indoors, outdoors, or in confined spaces involving beryllium-containing base or filler metals",
+          "object_text": "workers' exposure"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.252:021:003",
+      "triples": [
+        {
+          "subject_span": [3, 3],
+          "predicate": "be_equipped_with",
+          "object_span": [24, 25],
+          "subject_text": "workers",
+          "object_text": "airline respirators."
+        },
+        {
+          "subject_span": [3, 3],
+          "predicate": "perform_operations",
+          "object_span": [10, 13],
+          "subject_text": "workers",
+          "object_text": "welding or cutting operations"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.95:009:001",
+      "triples": [
+        {
+          "subject_span": [5, 6],
+          "predicate": "occurrence",
+          "object_span": [3, 6],
+          "subject_text": "noise exposure",
+          "object_text": "effects of noise exposure"
+        }
+      ]
+    },
+    {
+      "sentence_id": "1910.95:017:003",
+      "triples": [
+        {
+          "subject_span": [20, 20],
+          "predicate": "be_equipped_with",
+          "object_span": [23, 24],
+          "subject_text": "employees",
+          "object_text": "hearing protectors"
+        }
+      ]
+    }
+  ],
+  "reviewed_empty_ids": [
+    "1910.132:008:002",
+    "1910.134:012:003",
+    "1910.134:013:015",
+    "1910.134:028:001",
+    "1910.134:034:001",
+    "1910.134:050:001",
+    "1910.134:086:001",
+    "1910.138:009:002",
+    "1910.132:017:002",
+    "1910.132:018:001",
+    "1910.134:013:002",
+    "1910.134:013:004",
+    "1910.134:013:009",
+    "1910.134:013:010",
+    "1910.134:013:021",
+    "1910.134:013:023",
+    "1910.134:013:035",
+    "1910.134:013:037",
+    "1910.134:014:002",
+    "1910.134:022:001",
+    "1910.134:030:002",
+    "1910.134:044:002",
+    "1910.134:044:003",
+    "1910.134:054:001",
+    "1910.134:056:001",
+    "1910.134:061:001",
+    "1910.134:096:001",
+    "1910.135:008:001",
+    "1910.212:010:002",
+    "1910.212:010:003",
+    "1910.212:014:002",
+    "1910.212:027:002",
+    "1910.252:008:002",
+    "1910.252:015:004",
+    "1910.252:016:001",
+    "1910.252:017:001",
+    "1910.95:015:002",
+    "1910.95:026:001",
+    "1910.134:059:001",
+    "1910.134:063:001",
+    "1910.134:064:001",
+    "1910.132:010:002",
+    "1910.132:011:001",
+    "1910.132:014:002",
+    "1910.132:017:001",
+    "1910.134:011:002",
+    "1910.134:011:003",
+    "1910.134:012:002",
+    "1910.134:013:018",
+    "1910.134:013:020",
+    "1910.134:013:022",
+    "1910.134:013:027",
+    "1910.134:013:032",
+    "1910.134:013:033",
+    "1910.134:013:038",
+    "1910.134:014:003",
+    "1910.134:014:004",
+    "1910.134:015:002",
+    "1910.134:015:003",
+    "1910.134:033:001",
+    "1910.134:033:002",
+    "1910.134:035:001",
+    "1910.134:040:001",
+    "1910.134:041:001",
+    "1910.134:044:001",
+    "1910.134:050:003",
+    "1910.134:050:004",
+    "1910.134:053:001",
+    "1910.134:055:001",
+    "1910.134:060:002",
+    "1910.134:065:001",
+    "1910.134:066:002",
+    "1910.134:067:003",
+    "1910.134:068:002",
+    "1910.134:070:001",
+    "1910.134:074:001",
+    "1910.134:076:001",
+    "1910.134:076:002",
+    "1910.134:077:001",
+    "1910.134:079:001",
+    "1910.134:086:002",
+    "1910.134:087:002",
+    "1910.134:088:002",
+    "1910.134:092:001",
+    "1910.134:093:002",
+    "1910.134:098:003",
+    "1910.134:099:001",
+    "1910.134:100:001",
+    "1910.134:102:004",
+    "1910.134:105:003",
+    "1910.135:007:001",
+    "1910.135:009:001",
+    "1910.135:010:001",
+    "1910.135:011:001",
+    "1910.136:008:001",
+    "1910.136:009:001",
+    "1910.136:010:001",
+    "1910.212:010:001",
+    "1910.212:012:001",
+    "1910.212:015:001",
+    "1910.212:025:002",
+    "1910.212:026:002",
+    "1910.212:026:003",
+    "1910.252:009:002",
+    "1910.252:012:001",
+    "1910.252:013:003",
+    "1910.252:014:002",
+    "1910.252:015:003",
+    "1910.252:019:002",
+    "1910.252:019:003",
+    "1910.252:020:002",
+    "1910.95:009:002",
+    "1910.95:010:003",
+    "1910.95:011:001",
+    "1910.95:012:001",
+    "1910.95:012:003",
+    "1910.95:013:001",
+    "1910.95:014:002",
+    "1910.95:017:002",
+    "1910.95:018:002",
+    "1910.95:022:001",
+    "1910.95:027:002",
+    "1910.95:028:002",
+    "1910.95:029:002",
+    "1910.95:030:002",
+    "1910.95:031:002"
+  ]
+}

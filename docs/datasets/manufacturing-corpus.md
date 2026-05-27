@@ -39,9 +39,13 @@ The repo stores light control artifacts:
 
 - `configs/site_safety_monitor/corpus/osha_1910_sources.yaml`
 - `configs/site_safety_monitor/corpus/bert_corpus_rules.yaml`
+- `data/annotations/manufacturing_text_ie_annotation_seed.jsonl`
+- `data/annotations/manufacturing_text_ie_full_overrides.json`
+- `data/annotations/manufacturing_text_ie_full_gold.jsonl`
 - `src/site_safety_monitor/data/*`
 - `scripts/crawl_osha_corpus.py`
 - `scripts/prepare_bert_corpus.py`
+- `scripts/materialize_full_text_ie_annotations.py`
 
 ## What Lives in E:\data\SH17
 
@@ -95,11 +99,34 @@ The goal of that next phase is not to redesign the baseline. It is to swap in:
 - BERT-ready manufacturing sentences from the OSHA corpus
 - a later manually labeled text-IE dataset built from those sentences
 
+## Frozen Full Annotation Set
+
+The manufacturing text branch now has a repo-side frozen full annotation set covering the entire candidate pool.
+
+Source-of-truth files:
+
+- `data/annotations/manufacturing_text_ie_annotation_seed.jsonl`
+- `data/annotations/manufacturing_text_ie_full_overrides.json`
+- `data/annotations/manufacturing_text_ie_full_gold.jsonl`
+
+Current freeze summary:
+
+- `157` reviewed candidate sentences
+- `31` annotated sentences with non-empty triples
+- `38` total triples
+- `126` reviewed sentences intentionally left with `triples: []`
+
+The design intent is:
+
+- keep the raw candidate seed snapshot in-repo
+- keep manual decisions in `manufacturing_text_ie_full_overrides.json`
+- regenerate the final gold JSONL deterministically with `scripts/materialize_full_text_ie_annotations.py`
+
 ## Next Text IE Phase
 
 The approved next step is:
 
-- manually annotate a manufacturing-domain text IE dataset from the OSHA candidate pool
+- use the frozen full annotation set as the new text source-of-truth
 - train an English `BERT + BIEO` model
 - decode model outputs back into relational triples compatible with the baseline
 
@@ -119,6 +146,8 @@ The current active pilot assets are:
 - `E:\data\SH17\site_safety_monitor\text_ie\processed\bieo\pilot_train\encoded.jsonl`
 - `E:\data\SH17\site_safety_monitor\text_ie\processed\bieo\pilot_val\encoded.jsonl`
 - `E:\data\SH17\site_safety_monitor\text_ie\processed\bieo\pilot_test\encoded.jsonl`
+
+The pilot assets are still kept for traceability, but they are no longer the only gold source. The repo-side full freeze should be treated as the canonical annotation set before the next BERT training pass.
 
 The detailed design and plan live in:
 
